@@ -1,0 +1,346 @@
+/* ================= VARIABEL UTAMA ================= */
+:root {
+    /* WARNA */
+    --primary: #00eeff;
+    --secondary: #ff00d6;
+    --accent: #8c52ff;
+    --background: #0d0d17;
+    --card-bg: rgba(25, 25, 50, 0.7);
+    --text-color: #e0e0ff;
+    --text-light: #a0a0ff;
+    --border-color: rgba(0, 238, 255, 0.3);
+    
+    /* UKURAN */
+    --card-radius: 15px;
+    --skill-height: 8px;
+    --avatar-size: 140px;
+    --spacing-md: 25px;
+    
+    /* EFEK */
+    --card-shadow: 0 0 25px rgba(0, 238, 255, 0.1);
+    --card-glow: 0 0 25px var(--primary);
+    --transition-speed: 0.3s;
+    
+    /* FONT */
+    --base-font-size: 16px;
+}
+
+/* ================= STYLE UTAMA ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: var(--base-font-size);
+}
+
+body {
+    background: var(--background);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: var(--spacing-md);
+    min-height: 100vh;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(140, 82, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(0, 238, 255, 0.1) 0%, transparent 20%);
+}
+
+.cv-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .cv-container {
+        grid-template-columns: 35% 65%;
+    }
+}
+
+/* ================= SIDEBAR KIRI ================= */
+.sidebar {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: var(--card-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, rgba(0, 238, 255, 0.1), rgba(140, 82, 255, 0.1));
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-img {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    padding: 3px;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 1.1rem;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+.contact-info {
+    padding: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.info-icon {
+    color: var(--primary);
+    font-size: 1.2rem;
+    min-width: 30px;
+    padding-top: 3px;
+}
+
+.info-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+.skills-section {
+    padding: 0 25px 25px;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: var(--primary);
+    margin-right: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--primary);
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    height: var(--skill-height);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 10px;
+    position: relative;
+    transition: width 0.5s ease;
+}
+
+.skill-level::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* ================= KONTEN UTAMA KANAN ================= */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: var(--card-radius);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-glow);
+}
+
+.card-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+}
+
+.card-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary), transparent);
+    margin-left: 15px;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0 0 30px 30px;
+    border-left: 2px solid var(--primary);
+    margin-bottom: 20px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--primary);
+    left: -9px;
+    top: 0;
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-date i {
+    margin-right: 8px;
+}
+
+.timeline-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.timeline-subtitle {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.timeline-description {
+    font-size: 1rem;
+    color: rgba(224, 224, 255, 0.8);
+    line-height: 1.6;
+}
+
+.about-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* ================= EFEK FUTURISTIK ================= */
+.glow-effect {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.2) 0%, transparent 70%);
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.glow-1 {
+    top: 10%;
+    left: 10%;
+}
+
+.glow-2 {
+    bottom: 10%;
+    right: 10%;
+    background: radial-gradient(circle, rgba(255, 0, 214, 0.2) 0%, transparent 70%);
+}
+
+.hex-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: 
+        radial-gradient(circle at center, transparent 0%, var(--background) 100%),
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><polygon points="50,0 95,25 95,75 50,100 5,75 5,25" fill="none" stroke="rgba(0, 238, 255, 0.03)" stroke-width="1"/></svg>');
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 767px) {
+    .profile-header {
+        padding: 20px 15px;
+    }
+    
+    .name {
+        font-size: 1.8rem;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+}
