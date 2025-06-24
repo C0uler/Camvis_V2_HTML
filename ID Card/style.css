@@ -1,64 +1,86 @@
 /* ================= VARIABEL UTAMA ================= */
+/* 
+   VARIABEL INI ADALAH KUNCI UNTUK MENGUBAH TEMA SITUSMU!
+   COBA UBAH NILAI WARNA DI BAWAH INI DAN LIHAT PERUBAHANNYA SECARA LANGSUNG
+   TIDAK PERLU TAKUT SALAH - SEMUA BISA DIPERBAIKI DENGAN MUDAH!
+*/
 :root {
-    --primary-bg: #0f1117;          /* Warna latar utama halaman (dark mode) */
-    --accent: #00c6ff;              /* Warna aksen utama untuk judul, tombol, hover, dll */
-    --text-light: #e0e0e0;          /* Warna teks umum di dark mode */
-    --card-bg: #ffffff;             /* Background untuk kartu identitas agar tetap cerah */
-    --shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Shadow modern agar elemen tampak terangkat */
-    --primary: #00eeff;
-    --secondary: #ff00d6;
-    --accent: #8c52ff;
-    --background: #0d0d17;
-    --text-color: #e0e0ff;
-    --text-light: #a0a0ff;
-    --border-color: rgba(0, 238, 255, 0.3);
-    --radius: 15px;
+    --primary-bg: #0f1117;          /* 🌑 WARNA DASAR: Ubah nilai #0f1117 jadi #1a1c25 untuk background lebih terang */
+    --accent: #00c6ff;              /* 🔵 WARNA AKTIF: Coba ganti jadi #ff00aa untuk nuansa pink menyala! */
+    --text-light: #e0e0e0;          /* 💡 WARNA TEKS: Ubah ke #ffffff untuk teks lebih putih terang */
+    --card-bg: #ffffff;             /* 🃏 WARNA KARTU: Ganti jadi #f0f8ff untuk nuansa biru muda */
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* 👻 EFEK BAYANGAN: Ubah angka 25px jadi 40px untuk efek lebih dramatis */
+    --primary: #00eeff;             /* 🌊 WARNA UTAMA: Coba #ff9900 untuk nuansa oranye cerah */
+    --secondary: #ff00d6;           /* 🌸 WARNA SEKUNDER: Ganti jadi #00ff00 untuk hijau neon */
+    --accent: #8c52ff;              /* 🟣 WARNA AKSEN: Ubah ke #ff5252 untuk merah menyala */
+    --background: #0d0d17;          /* 🪐 WARNA BACKGROUND: Coba #1e1e2e untuk ungu gelap */
+    --text-color: #e0e0ff;          /* ✨ WARNA TEKS 2: Ganti jadi #aaffaa untuk teks hijau muda */
+    --text-light: #a0a0ff;          /* 💎 WARNA TEKS RINGAN: Ubah ke #ffa0a0 untuk pink muda */
+    --border-color: rgba(0, 238, 255, 0.3); /* 🖼️ WARNA BORDER: Ubah angka 0.3 jadi 0.7 untuk border lebih tegas */
+    --radius: 15px;                 /* 🔵 UKURAN SUDUT: Ganti jadi 25px untuk sudut lebih melengkung */
 }
 
 /* ================= RESET & DASAR ================= */
+/* 
+   INI ADALAH PENGATURAN DASAR UNTUK SEMUA ELEMEN
+   BOX-SIZING MEMBUAT PERHITUNGAN UKURAN ELEMEN LEBIH MUDAH
+*/
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* 📦 MEMBUAT UKURAN ELEMEN TIDAK BERANTAKAN SAAT ADA PADDING */
 }
 
+/* 
+   STYLE UNTUK BADAN UTAMA HALAMAN
+   COBA UBAH "PADDING: 40px 20px" MENJADI "PADDING: 20px" UNTUK SPASI LEBIH SEDIKIT
+*/
 body {
-    font-family: 'Inter', sans-serif;
-    background: var(--primary-bg);
-    color: var(--text-light);
+    font-family: 'Inter', sans-serif; /* ✍️ GANTI FONT: Coba ganti jadi 'Comic Sans MS' untuk gaya lucu */
+    background: var(--primary-bg); /* ⚡ MENGGUNAKAN VARIABEL WARNA DASAR */
+    color: var(--text-light); /* ⚡ MENGGUNAKAN VARIABEL WARNA TEKS */
     margin: 0;
-    padding: 40px 20px;
+    padding: 40px 20px; /* 🔲 UBAH ANGKA INI UNTUK MENGATUR SPASI DARI TEPI */
     display: flex;
     flex-direction: column;
     align-items: center;
-        background-image:
+    background-image: /* 🌌 BACKGROUND GRADIEN CANTIK */
         radial-gradient(circle at 10% 20%, rgba(140, 82, 255, 0.1) 0%, transparent 20%),
         radial-gradient(circle at 90% 80%, rgba(0, 238, 255, 0.1) 0%, transparent 20%);
 }
 
+/* 
+   STYLE UNTUK JUDUL UTAMA (H1)
+   COBA UBAH WARNANYA DENGAN MENGEDIT VARIABEL --PRIMARY DAN --SECONDARY DI ATAS
+*/
 h1 {
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(45deg, var(--primary), var(--secondary)); /* 🌈 GRADIEN WARNA */
+    -webkit-background-clip: text; /* ✂️ MEMBUAT BACKGROUND HANYA DI TEKS */
+    -webkit-text-fill-color: transparent; /* 🎭 MEMBUAT TEKS TRANSPARAN */
     margin-bottom: 0.2em;
 }
 
 /* ================= HEADER ================= */
 .page-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* 📏 UBAH JARAK DARI ELEMEN DI BAWAHNYA */
 }
 
+/* 
+   JUDUL UTAMA DENGAN EFEK NEON!
+   COBA UBAH "text-shadow: 0 0 8px" MENJADI "0 0 15px" UNTUK GLOW LEBIH BESAR
+   DAN UBAH ANGKA DI ANIMASI "3.5s" MENJADI "2s" UNTUK EFEK KEDAP-KEDIP LEBIH CEPAT
+*/
 .page-header h1 {
-    font-size: 38px;
+    font-size: 38px; /* 🔤 UBAH UKURAN FONT: Coba ganti jadi 48px untuk lebih besar */
     color: var(--accent);
     margin-bottom: 10px;
-    text-shadow: 0 0 8px rgba(0,198,255,0.6); /* Efek glowing neon */
-    animation: flicker 3.5s infinite alternate;
+    text-shadow: 0 0 8px rgba(0,198,255,0.6); /* ✨ EFEK GLOWING NEON */
+    animation: flicker 3.5s infinite alternate; /* 💫 ANIMASI KEDAP-KEDIP */
 }
 
 .subtitle {
-    font-size: 17px;
+    font-size: 17px; /* 🔤 UBAH UKURAN SUBTITLE */
     color: var(--text-light);
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* 📏 UBAH JARAK DARI ELEMEN DI BAWAHNYA */
 }
 
 /* ================= PREVIEW GAMBAR ================= */
@@ -67,49 +89,63 @@ h1 {
     margin-bottom: 30px;
 }
 
+/* 
+   PREVIEW GAMBAR PROFIL
+   COBA UBAH "width: 320px" MENJADI "250px" UNTUK GAMBAR LEBIH KECIL
+   DAN "border-radius: 16px" MENJADI "50%" UNTUK BENTUK BULAT
+*/
 .preview-img {
     max-width: 100%;
-    width: 320px;
-    border-radius: 16px;
-    border: 2px dashed #444;
-    padding: 8px;
-    background: #1b1e25;
+    width: 320px; /* 🖼️ LEBAR GAMBAR */
+    border-radius: 16px; /* 🔵 SUDUT MELENGKUNG - UBAH ANGKA INI! */
+    border: 2px dashed #444; /* 🖌️ GARIS PUTUS-PUTUS - UBAH WARNA #444 */
+    padding: 8px; /* 📏 UBAH JARAK ANTARA GAMBAR DAN BORDER */
+    background: #1b1e25; /* 🎨 WARNA BACKGROUND GAMBAR */
 }
 
 .caption {
-    font-size: 14px;
-    color: #999;
-    margin-top: 6px;
+    font-size: 14px; /* 🔤 UKURAN TEKS KETERANGAN */
+    color: #999; /* 🎨 WARNA TEKS - COBA GANTI JADI #ff0000 */
+    margin-top: 6px; /* 📏 JARAK DARI GAMBAR */
 }
 
 /* ================= KARTU IDENTITAS ================= */
+/* 
+   KARTU UTAMA TEMPAT DATA DIRI
+   COBA UBAH "max-width: 720px" MENJADI "600px" UNTUK KARTU LEBIH KECIL
+   DAN "padding: 30px 40px" MENJADI "20px 30px" UNTUK SPASI DALAM LEBIH SEDIKIT
+*/
 .card-container {
-    background: var(--card-bg);
-    color: #222;
-    border-radius: 16px;
-    box-shadow: var(--shadow);
+    background: var(--card-bg); /* 🃏 WARNA BACKGROUND KARTU */
+    color: #222; /* 🎨 WARNA TEKS - COBA GANTI JADI #000000 */
+    border-radius: var(--radius); /* ⚡ PAKAI VARIABEL RADIUS */
+    box-shadow: var(--shadow); /* 👻 EFEK BAYANGAN */
     max-width: 720px;
     width: 100%;
     padding: 30px 40px;
-    box-shadow: 0 0 15px var(--accent);
-    box-sizing: border-box;
-    transition: transform 0.2s ease;
-    animation: fade-slide-up 1s ease-out;
+    box-shadow: 0 0 15px var(--accent); /* ✨ EFEK GLOW BIRU */
+    transition: transform 0.2s ease; /* ⏱️ ANIMASI GERAK HALUS */
+    animation: fade-slide-up 1s ease-out; /* 🚀 ANIMASI MUNCUL DARI BAWAH */
 }
 
+/* 
+   EFEK SAAT KURSOR DI ATAS KARTU
+   COBA UBAH "translateY(-5px)" MENJADI "-10px" UNTUK GERAKAN LEBIH TINGGI
+   DAN UBAH WARNA GLOW DENGAN MENGEDIT VARIABEL --PRIMARY
+*/
 .card-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 25px var(--primary);
+    transform: translateY(-5px); /* ⬆️ KARTU NAIK SEDIKIT */
+    box-shadow: 0 0 25px var(--primary); /* 💥 GLOW LEBIH BESAR */
 }
 
 .card-container h2 {
     text-align: center;
-    font-size: 32px;
-    color: #1a237e;
+    font-size: 32px; /* 🔤 UKURAN FONT JUDUL */
+    color: #1a237e; /* 🎨 WARNA JUDUL - COBA #8a2be2 UNTUK UNGU */
     margin-top: 0;
     margin-bottom: 24px;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-color); /* ⚡ PAKAI VARIABEL BORDER */
+    padding-bottom: 12px; /* 📏 JARAK GARIS DARI TEKS */
 }
 
 /* ================= ISI KARTU ================= */
@@ -117,68 +153,74 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* 📱 OTOMATIS RAPI DI MOBILE */
 }
 
-/* Gambar avatar */
+/* GAMBAR AVATAR */
 .avatar {
     flex: 1;
     text-align: center;
     margin-bottom: 20px;
 }
 
+/* 
+   FOTO PROFIL
+   COBA UBAH "width: 200px" dan "height: 200px" MENJADI "150px" UNTUK LEBIH KECIL
+   DAN "border-radius: 16px" MENJADI "50%" UNTUK BENTUK BULAT
+*/
 .avatar img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 16px;
-    border: 3px solid #90caf9;
-    box-shadow: 0 0 10px var(--accent);
-    animation: pulse-glow 3.5s infinite ease-in-out;
+    width: 200px; /* 🖼️ LEBAR FOTO */
+    height: 200px; /* 📏 TINGGI FOTO */
+    object-fit: cover; /* 🖼️ MEMASTIKAN FOTO TIDAK TERDISTORSI */
+    border-radius: 16px; /* 🔵 SUDUT MELENGKUNG */
+    border: 3px solid #90caf9; /* 🖌️ WARNA BORDER - COBA #ff00ff */
+    box-shadow: 0 0 10px var(--accent); /* ✨ GLOW WARNA */
+    animation: pulse-glow 3.5s infinite ease-in-out; /* 💖 ANIMASI DENYUT WARNA */
 }
 
-/* Label untuk input upload */
+/* LABEL UNTUK UPLOAD FOTO */
 .upload-label {
     display: inline-block;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    padding: 10px 20px; /* 📏 UKURAN TOMBOL */
+    background: linear-gradient(135deg, #00c6ff, #0072ff); /* 🌈 GRADIEN WARNA */
     color: white;
-    font-size: 14px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 14px; /* 🔤 UKURAN FONT */
+    border-radius: 8px; /* 🔵 SUDUT MELENGKUNG */
+    cursor: pointer; /* 👆 BERUBAH JADI TANGAN SAAT DIARAHKAN */
+    transition: background-color 0.3s ease; /* ⏱️ ANIMASI PERUBAHAN WARNA */
     margin-top: 12px;
 }
 
+/* EFEK SAAT TOMBOL DIARAHKAN */
 .upload-label:hover {
-    background-color: #1565c0;
+    background-color: #1565c0; /* 🎨 WARNA BERUBAH - COBA #ff0000 */
 }
 
-/* Sembunyikan input file */
+/* SEMBUNYIKAN INPUT FILE ASLI */
 input[type="file"]#upload {
-    display: none;
+    display: none; /* 🙈 SEMBUNYIKAN ELEMEN INPUT STANDAR */
 }
 
-/* Informasi di sisi kanan */
+/* INFORMASI DI SISI KANAN */
 .info {
     flex: 2;
     align-self: flex-start;
-    padding-left: 30px;
+    padding-left: 30px; /* 📏 JARAK DARI FOTO */
     text-align: left;
-    min-width: 260px;
+    min-width: 260px; /* 📱 MINIMAL LEBAR DI MOBILE */
 }
 
 .info p {
     margin: 12px 0;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.6;
-    color: #333;
+    font-size: 20px; /* 🔤 UKURAN FONT INFORMASI */
+    font-weight: 600; /* 🔠 KETEBALAN FONT */
+    line-height: 1.6; /* 📏 JARAK ANTAR BARIS */
+    color: #333; /* 🎨 WARNA TEKS - COBA #000000 */
 }
 
 .info p strong {
     font-size: 20px;
-    color: #1e88e5;
+    color: #1e88e5; /* 🔵 WARNA TEKS TEBAL - COBA #ff5722 */
 }
 
 /* ================= FORM EDIT ================= */
@@ -188,65 +230,50 @@ input[type="file"]#upload {
 }
 
 .form-edit h3 {
-    color: var(--accent);
+    color: var(--accent); /* ⚡ WARNA DARI VARIABEL */
     margin-bottom: 16px;
     font-weight: 600;
 }
 
+/* INPUT TEXT */
 .form-edit input {
     display: block;
     margin: 10px auto;
     padding: 10px;
-    width: 80%;
-    max-width: 300px;
-    border: 1px solid #555;
-    background: #1b1e25;
-    color: #e0e0e0;
-    border-radius: 8px;
-    font-size: 15px;
-    transition: all 0.3s ease;
+    width: 80%; /* 📏 LEBAR INPUT - COBA 90% */
+    max-width: 300px; /* 📏 MAKSIMAL LEBAR */
+    border: 1px solid #555; /* 🖌️ WARNA BORDER */
+    background: #1b1e25; /* 🎨 BACKGROUND INPUT */
+    color: #e0e0e0; /* 🎨 WARNA TEKS INPUT */
+    border-radius: 8px; /* 🔵 SUDUT MELENGKUNG */
+    font-size: 15px; /* 🔤 UKURAN FONT */
+    transition: all 0.3s ease; /* ⏱️ ANIMASI PERUBAHAN */
 }
 
+/* SAAT INPUT DIKLIK */
 .form-edit input:focus {
-    border-color: var(--accent);
-    outline: none;
-    box-shadow: 0 0 5px var(--accent);
+    border-color: var(--accent); /* ✨ WARNA BORDER BERUBAH */
+    outline: none; /* ❌ HILANGKAN OUTLINE DEFAULT */
+    box-shadow: 0 0 5px var(--accent); /* 💡 EFEK GLOW */
 }
 
+/* TOMBOL SIMPAN */
 .form-edit button {
     margin-top: 12px;
-    padding: 10px 24px;
-    background: var(--accent);
+    padding: 10px 24px; /* 📏 UKURAN TOMBOL */
+    background: var(--accent); /* ⚡ WARNA DARI VARIABEL */
     color: black;
     font-weight: 600;
     border: none;
-    border-radius: 8px;
+    border-radius: 8px; /* 🔵 SUDUT MELENGKUNG */
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /* ⏱️ ANIMASI PERUBAHAN */
 }
 
+/* EFEK SAAT TOMBOL DIARAHKAN */
 .form-edit button:hover {
-    background: #00a8d6;
+    background: #00a8d6; /* 🎨 WARNA BERUBAH - COBA #ff0000 */
 }
-
-#reset-btn {
-    margin-top: 12px;
-    padding: 10px 24px;
-    background: transparent;
-    color: var(--accent);
-    font-weight: 600;
-    border: 2px solid var(--accent);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-left: 12px;
-}
-
-#reset-btn:hover {
-    background: var(--accent);
-    color: black;
-}
-
 
 /* ================= PENJELASAN ================= */
 .explanation {
@@ -294,33 +321,28 @@ input[type="file"]#upload {
     }
 }
 
+/* ================= ANIMASI KEREN ================= */
+/* 
+   ANIMASI DENYUT WARNA UNTUK FOTO PROFIL
+   COBA UBAH "3.5s" MENJADI "2s" UNTUK DENYUT LEBIH CEPAT
+*/
 @keyframes pulse-glow {
-    0% {
-        box-shadow: 0 0 5px var(--accent);
-    }
-    50% {
-        box-shadow: 0 0 5px var(--accent), 0 0 20px var(--accent);
-    }
-    100% {
-        box-shadow: 0 0 5px var(--accent);
-    }
+    0% { box-shadow: 0 0 5px var(--accent); }
+    50% { box-shadow: 0 0 5px var(--accent), 0 0 20px var(--accent); } /* 💥 GLOW BESAR DI TENGAH */
+    100% { box-shadow: 0 0 5px var(--accent); }
 }
 
+/* ANIMASI MUNCUL DARI BAWAH */
 @keyframes fade-slide-up {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(30px); } /* 🙈 AWAL: TAK TERLIHAT DI BAWAH */
+    100% { opacity: 1; transform: translateY(0); } /* 👀 AKHIR: MUNCUL DI POSISI NORMAL */
 }
 
+/* ANIMASI KEDAP-KEDIP NEON */
 @keyframes flicker {
     0% { opacity: 1; text-shadow: 0 0 8px rgba(0,198,255,0.6); }
-    45% { opacity: 0.8; text-shadow: 0 0 12px rgba(0,198,255,0.4); }
-    70% { opacity: 1; text-shadow: 0 0 15px rgba(0,198,255,0.7); }
-    85% { opacity: 0.9; text-shadow: 0 0 8px rgba(0,198,255,0.5); }
+    45% { opacity: 0.8; text-shadow: 0 0 12px rgba(0,198,255,0.4); } /* 💫 KEDAP PERTAMA */
+    70% { opacity: 1; text-shadow: 0 0 15px rgba(0,198,255,0.7); } /* ✨ GLOW MAKSIMAL */
+    85% { opacity: 0.9; text-shadow: 0 0 8px rgba(0,198,255,0.5); } /* 💫 KEDAP KEDUA */
     100% { opacity: 1; text-shadow: 0 0 12px rgba(0,198,255,0.6); }
 }
