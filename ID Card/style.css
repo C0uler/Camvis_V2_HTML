@@ -1,259 +1,326 @@
+/* ================= VARIABEL UTAMA ================= */
 :root {
-  --primary-bg: #0f1117;
-  --accent: #00c6ff;
-  --text-light: #e0e0e0;
-  --card-bg: #ffffff;
-  --shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    --primary-bg: #0f1117;          /* Warna latar utama halaman (dark mode) */
+    --accent: #00c6ff;              /* Warna aksen utama untuk judul, tombol, hover, dll */
+    --text-light: #e0e0e0;          /* Warna teks umum di dark mode */
+    --card-bg: #ffffff;             /* Background untuk kartu identitas agar tetap cerah */
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Shadow modern agar elemen tampak terangkat */
+    --primary: #00eeff;
+    --secondary: #ff00d6;
+    --accent: #8c52ff;
+    --background: #0d0d17;
+    --text-color: #e0e0ff;
+    --text-light: #a0a0ff;
+    --border-color: rgba(0, 238, 255, 0.3);
+    --radius: 15px;
 }
 
+/* ================= RESET & DASAR ================= */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--primary-bg);
-  color: var(--text-light);
-  margin: 0;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    font-family: 'Inter', sans-serif;
+    background: var(--primary-bg);
+    color: var(--text-light);
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        background-image:
+        radial-gradient(circle at 10% 20%, rgba(140, 82, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(0, 238, 255, 0.1) 0%, transparent 20%);
 }
 
-/* === Header === */
+h1 {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.2em;
+}
+
+/* ================= HEADER ================= */
 .page-header {
-  text-align: center;
-  margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .page-header h1 {
-  font-size: 38px;
-  color: var(--accent);
-  margin-bottom: 10px;
-  text-shadow: 0 0 8px rgba(0,198,255,0.6);
+    font-size: 38px;
+    color: var(--accent);
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px rgba(0,198,255,0.6); /* Efek glowing neon */
+    animation: flicker 3.5s infinite alternate;
 }
 
 .subtitle {
-  font-size: 17px;
-  color: #bbb;
+    font-size: 17px;
+    color: var(--text-light);
+    margin-bottom: 30px;
 }
 
-/* === Preview Image === */
+/* ================= PREVIEW GAMBAR ================= */
 .image-preview {
-  text-align: center;
-  margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .preview-img {
-  max-width: 100%;
-  width: 320px;
-  border-radius: 16px;
-  border: 2px dashed #444;
-  padding: 8px;
-  background: #1b1e25;
+    max-width: 100%;
+    width: 320px;
+    border-radius: 16px;
+    border: 2px dashed #444;
+    padding: 8px;
+    background: #1b1e25;
 }
 
 .caption {
-  font-size: 14px;
-  color: #999;
-  margin-top: 6px;
+    font-size: 14px;
+    color: #999;
+    margin-top: 6px;
 }
 
-/* === Kartu Identitas === */
+/* ================= KARTU IDENTITAS ================= */
 .card-container {
-  background: #ffffff;
-  color: #222;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  max-width: 720px;
-  width: 100%;
-  padding: 30px 40px;
-  box-sizing: border-box;
-  transition: transform 0.2s ease;
+    background: var(--card-bg);
+    color: #222;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    max-width: 720px;
+    width: 100%;
+    padding: 30px 40px;
+    box-shadow: 0 0 15px var(--accent);
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+    animation: fade-slide-up 1s ease-out;
 }
 
 .card-container:hover {
-  transform: translateY(-4px);
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px var(--primary);
 }
 
 .card-container h2 {
-  text-align: center;
-  font-size: 32px;
-  color: #1a237e;
-  margin-top: 0;
-  margin-bottom: 24px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 12px;
+    text-align: center;
+    font-size: 32px;
+    color: #1a237e;
+    margin-top: 0;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
 }
 
+/* ================= ISI KARTU ================= */
 .card-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+/* Gambar avatar */
 .avatar {
-  flex: 1;
-  text-align: center;
-  margin-bottom: 20px;
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .avatar img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 3px solid #90caf9;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 3px solid #90caf9;
+    box-shadow: 0 0 10px var(--accent);
+    animation: pulse-glow 3.5s infinite ease-in-out;
 }
 
-#upload {
-  margin-top: 12px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 6px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  background: #eee;
-}
-
-.info {
-  flex: 2;
-  align-self: flex-start;
-  padding-left: 30px;
-  text-align: left;
-  min-width: 260px;
-}
-
-.info p {
-  margin: 12px 0;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.6;
-  color: #333;
-}
-
-.info p strong {
-  font-size: 20px;
-  color: #1e88e5;
-}
-
-
-/* === Form Edit === */
-.form-edit {
-  margin-top: 24px;
-  text-align: center;
-}
-
-.form-edit h3 {
-  color: var(--accent);
-  margin-bottom: 16px;
-  font-weight: 600;
-}
-
-.form-edit input {
-  display: block;
-  margin: 10px auto;
-  padding: 10px;
-  width: 80%;
-  max-width: 300px;
-  border: 1px solid #555;
-  background: #1b1e25;
-  color: #e0e0e0;
-  border-radius: 8px;
-  font-size: 15px;
-  transition: all 0.3s ease;
-}
-
-.form-edit input:focus {
-  border-color: var(--accent);
-  outline: none;
-  box-shadow: 0 0 5px var(--accent);
-}
-
-.form-edit button {
-  margin-top: 12px;
-  padding: 10px 24px;
-  background: var(--accent);
-  color: black;
-  font-weight: 600;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.form-edit button:hover {
-  background: #00a8d6;
-}
-
-/* === Explanation Section === */
-.explanation {
-  max-width: 720px;
-  margin-top: 50px;
-  text-align: left;
-  background: #1b1e25;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
-  color: #ccc;
-}
-
-.explanation h3 {
-  color: var(--accent);
-  margin-bottom: 12px;
-}
-
-.explanation ul {
-  padding-left: 20px;
-  color: #ddd;
-  line-height: 1.6;
-}
-
-.note {
-  margin-top: 16px;
-  font-style: italic;
-  color: #aaa;
-}
-
-/* === Responsive === */
-@media (max-width: 600px) {
-  .card-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info {
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .info p {
-    font-size: 15px;
-  }
-}
-
-input[type="file"]#upload {
-  display: none;
-}
-
+/* Label untuk input upload */
 .upload-label {
-  display: inline-block;
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
-  color: white;
-  font-size: 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 12px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
 }
 
 .upload-label:hover {
-  background-color: #1565c0;
+    background-color: #1565c0;
 }
 
+/* Sembunyikan input file */
+input[type="file"]#upload {
+    display: none;
+}
+
+/* Informasi di sisi kanan */
+.info {
+    flex: 2;
+    align-self: flex-start;
+    padding-left: 30px;
+    text-align: left;
+    min-width: 260px;
+}
+
+.info p {
+    margin: 12px 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #333;
+}
+
+.info p strong {
+    font-size: 20px;
+    color: #1e88e5;
+}
+
+/* ================= FORM EDIT ================= */
+.form-edit {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.form-edit h3 {
+    color: var(--accent);
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.form-edit input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #555;
+    background: #1b1e25;
+    color: #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-edit input:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 5px var(--accent);
+}
+
+.form-edit button {
+    margin-top: 12px;
+    padding: 10px 24px;
+    background: var(--accent);
+    color: black;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-edit button:hover {
+    background: #00a8d6;
+}
+
+#reset-btn {
+    margin-top: 12px;
+    padding: 10px 24px;
+    background: transparent;
+    color: var(--accent);
+    font-weight: 600;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 12px;
+}
+
+#reset-btn:hover {
+    background: var(--accent);
+    color: black;
+}
+
+
+/* ================= PENJELASAN ================= */
+.explanation {
+    max-width: 720px;
+    margin-top: 50px;
+    text-align: left;
+    background: #1b1e25;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    color: #ccc;
+}
+
+.explanation h3 {
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.explanation ul {
+    padding-left: 20px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.note {
+    margin-top: 16px;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .info p {
+        font-size: 15px;
+    }
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 5px var(--accent);
+    }
+    50% {
+        box-shadow: 0 0 5px var(--accent), 0 0 20px var(--accent);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--accent);
+    }
+}
+
+@keyframes fade-slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flicker {
+    0% { opacity: 1; text-shadow: 0 0 8px rgba(0,198,255,0.6); }
+    45% { opacity: 0.8; text-shadow: 0 0 12px rgba(0,198,255,0.4); }
+    70% { opacity: 1; text-shadow: 0 0 15px rgba(0,198,255,0.7); }
+    85% { opacity: 0.9; text-shadow: 0 0 8px rgba(0,198,255,0.5); }
+    100% { opacity: 1; text-shadow: 0 0 12px rgba(0,198,255,0.6); }
+}
