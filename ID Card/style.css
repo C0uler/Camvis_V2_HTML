@@ -1,0 +1,259 @@
+:root {
+  --primary-bg: #0f1117;
+  --accent: #00c6ff;
+  --text-light: #e0e0e0;
+  --card-bg: #ffffff;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--primary-bg);
+  color: var(--text-light);
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Header === */
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 38px;
+  color: var(--accent);
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(0,198,255,0.6);
+}
+
+.subtitle {
+  font-size: 17px;
+  color: #bbb;
+}
+
+/* === Preview Image === */
+.image-preview {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.preview-img {
+  max-width: 100%;
+  width: 320px;
+  border-radius: 16px;
+  border: 2px dashed #444;
+  padding: 8px;
+  background: #1b1e25;
+}
+
+.caption {
+  font-size: 14px;
+  color: #999;
+  margin-top: 6px;
+}
+
+/* === Kartu Identitas === */
+.card-container {
+  background: #ffffff;
+  color: #222;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  max-width: 720px;
+  width: 100%;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+.card-container:hover {
+  transform: translateY(-4px);
+}
+
+.card-container h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #1a237e;
+  margin-top: 0;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 12px;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid #90caf9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#upload {
+  margin-top: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #eee;
+}
+
+.info {
+  flex: 2;
+  align-self: flex-start;
+  padding-left: 30px;
+  text-align: left;
+  min-width: 260px;
+}
+
+.info p {
+  margin: 12px 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #333;
+}
+
+.info p strong {
+  font-size: 20px;
+  color: #1e88e5;
+}
+
+
+/* === Form Edit === */
+.form-edit {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.form-edit h3 {
+  color: var(--accent);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.form-edit input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  border: 1px solid #555;
+  background: #1b1e25;
+  color: #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-edit input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 5px var(--accent);
+}
+
+.form-edit button {
+  margin-top: 12px;
+  padding: 10px 24px;
+  background: var(--accent);
+  color: black;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-edit button:hover {
+  background: #00a8d6;
+}
+
+/* === Explanation Section === */
+.explanation {
+  max-width: 720px;
+  margin-top: 50px;
+  text-align: left;
+  background: #1b1e25;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  color: #ccc;
+}
+
+.explanation h3 {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.explanation ul {
+  padding-left: 20px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.note {
+  margin-top: 16px;
+  font-style: italic;
+  color: #aaa;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .card-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .info p {
+    font-size: 15px;
+  }
+}
+
+input[type="file"]#upload {
+  display: none;
+}
+
+.upload-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 12px;
+}
+
+.upload-label:hover {
+  background-color: #1565c0;
+}
+

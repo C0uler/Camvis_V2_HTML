@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Build Your Own ID Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Judul halaman -->
+  <header class="page-header">
+    <h1>Build Your Own ID Card!</h1>
+    <p class="subtitle">Kreasikan kartu identitas unikmu sebagai calon mahasiswa Informatika 👨‍💻👩‍💻</p>
+  </header>
+
+  <!-- Kartu Identitas -->
+  <div class="card-container" id="export-area">
+    <h2>Kartu Identitas</h2>
+    <div class="card-content">
+    <div class="avatar">
+        <img id="avatar-img" src="assets/Guy.jpg" alt="Avatar">
+        <label for="upload" class="upload-label">Ganti Gambar</label>
+        <input type="file" id="upload" accept="image/*">
+    </div>
+      <div class="info">
+        <!-- Ganti nama, hobi, dan kata-kata di sini -->
+        <p><strong>Nama:</strong> John Thor</p>
+        <p><strong>Hobi:</strong> Ngobrol bareng AI</p>
+        <p><strong>Kata-kata Hari Ini:</strong> "Lorem ipsum dolor sit amet"</p>
+        <!-- Juga bisa tambahin keterangan baru loh di sini!! -->
+         <!-- <p><strong>Asal Sekolah:</strong> "Lorem ipsum dolor sit amet"</p> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Penjelasan -->
+  <section class="explanation">
+    <h3>Apa saja yang bisa kamu ubah?</h3>
+    <ul>
+      <li>🖼 Gambar profil (klik dan upload dari file)</li>
+      <li>✏️ Nama, hobi, dan kata-kata hari ini (langsung diubah di kodenya)</li>
+      <li>🎨 Warna latar dan gaya bisa dimodifikasi melalui CSS</li>
+    </ul>
+    <p class="note">Silakan eksplorasi kodenya! Tidak ada jawaban salah — ini tentang kreativitas kamu 😄</p>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>
