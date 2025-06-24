@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Futuristik Modular</title>
+    <title>CV John Thor</title> <!-- Jangan Lupa Ubah Menjadi CV-mu ya -->
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="glow-effect glow-1"></div>
@@ -16,59 +15,64 @@
         <div class="sidebar">
             <div class="hex-pattern"></div>
             <div class="profile-header">
-                <img src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Foto Profil" class="profile-img">
-                <h1 class="name">ALEXANDER RAY</h1>
-                <p class="title">Frontend Developer & UI Designer</p>
+                <img src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Foto Profil" class="profile-img"> <!-- Disini letak profile imagenya -->
+                <h1 class="name">John Thor</h1> <!-- modifikasi namamu -->
+                <p class="work-title">Siswa SMA</p> <!-- modifikasi Pekerjaanmu (buat sekreatif mungkin :>) -->
             </div>
-            
+
+        <!-- Modifikasi ContacInfo Kamu Disini -->
             <div class="contact-info">
                 <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
                     <div class="info-content">
                         <div class="info-label">Email</div>
-                        <a href="mailto:" class="info-value">alex.ray@example.com</a>
+                        <a href="mailto:" class="info-value">John.thor@example.com</a> <!-- modifikasi emailmu (Jangan lupa isi juga ya mailtonya) -->
                     </div>
                 </div>
                 
                 <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
                     <div class="info-content">
                         <div class="info-label">Telepon</div>
-                        <a href="tel:+" class="info-value">+62 812 3456 7890</a>
+                        <a href="tel:+" class="info-value">+62 812 3456 7890</a> <!-- Disini letak nomor teleponnya -->
                     </div>
                 </div>
                 
                 <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
                     <div class="info-content">
                         <div class="info-label">Lokasi</div>
-                        <div class="info-value">Jakarta, Indonesia</div>
+                        <div class="info-value">Jakarta, Indonesia</div> <!-- Ini letak Alamatmu -->
                     </div>
                 </div>
                 
-                <div class="info-item">
-                    <div class="info-icon">
-                        <i class="fab fa-github"></i>
-                    </div>
+                <div class="info-item"> <!-- Start Copy -->
                     <div class="info-content">
-                        <div class="info-label">GitHub</div>
-                        <a href="https://www.youtube.com/" class="info-value">github.com/alexray</a>
+                        <div class="info-label">GitHub</div> <!-- Ubah ini kalau kalian mau social media selain GitHub-->
+                        <a href="https://www.youtube.com/" class="info-value">github.com/alexray</a> <!-- Disini letak social mediamu, kalau mau ditambah tinggal copas aj dari info item ya -->
                     </div>
-                </div>
+                </div> <!-- End Copy (Kalau mau tambahin Info Social media lainnya )-->
+
             </div>
+
+            <!-- Skill section yang ada di SideBar kiri  -->
             
              <div class="skills-section">
-                <h3 class="section-title">Keahlian Teknis</h3>
+
+                <h3 class="skill-title">Kemampuan Umum</h3>
                 
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>HTML/CSS</span>
+                        <span>Komunikasi & Sosialisasi</span>    <!-- Ini letak span untuk nama skill yang kamu punyai -->
+                        <span class="skill-percent"></span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-percent="90"></div>  <!-- Disini letak persentase kemampuanny, data-percent ini nantinya akan diambil oleh JS bisa dilihat jg. Fungsinya untuk membentuk garis persentase yang dapat dilihat pada htmlnya -->
+                    </div>
+                </div>
+                
+
+
+                <div class="skill-item">
+                    <div class="skill-name">
+                        <span>Kerja Tim</span>
                         <span class="skill-percent"></span>
                     </div>
                     <div class="skill-bar">
@@ -78,17 +82,7 @@
                 
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>JavaScript</span>
-                        <span class="skill-percent"></span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-level" data-percent="90"></div>
-                    </div>
-                </div>
-                
-                <div class="skill-item">
-                    <div class="skill-name">
-                        <span>React.js</span>
+                        <span>Manajemen Waktu</span>
                         <span class="skill-percent"></span>
                     </div>
                     <div class="skill-bar">
@@ -98,7 +92,7 @@
                 
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>UI/UX Design</span>
+                        <span>Kepemimpinan</span>
                         <span class="skill-percent"></span>
                     </div>
                     <div class="skill-bar">
@@ -108,14 +102,18 @@
                 
                 <div class="skill-item">
                     <div class="skill-name">
-                        <span>Node.js</span>
+                        <span>Pemecahan Masalah</span>
                         <span class="skill-percent"></span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-level" data-percent="75"></div>
+                        <div class="skill-level" data-percent="88"></div>
                     </div>
                 </div>
+
+                <!-- Bila ingin menambahkan skill lain bisa ditambahkan yaa  -->
             </div>
+
+
         </div>
 
         
@@ -124,80 +122,92 @@
         <div class="main-content">
             <div class="card">
                 <h2 class="card-title">Tentang Saya</h2>
+
+                <!-- Ini merupakan letak main konten kita. Disini kamu bisa mendeskripsikan diri kamu, bila ingin membuat paragraf baru gunakan <p> </p> -->
+
                 <p class="about-content">
-                    Saya adalah seorang Frontend Developer dengan pengalaman 5 tahun dalam membangun antarmuka pengguna yang menarik dan responsif. Saya memiliki passion dalam menciptakan pengalaman digital yang intuitif dengan teknologi terbaru. 
+                    Saya adalah siswa aktif kelas XI di SMA Negeri 5 Bandung jurusan IPA. Saya memiliki minat besar dalam bidang teknologi, organisasi sekolah, dan pengembangan diri. Aktif sebagai anggota OSIS divisi Teknologi Informasi dan klub robotik sekolah.
                 </p>
+                <br>
                 <p class="about-content">
-                    Keahlian saya mencakup pengembangan aplikasi web modern menggunakan React.js, Vue.js, dan framework terkini. Saya juga aktif dalam komunitas pengembangan web dan senang berbagi pengetahuan melalui blog dan workshop.
+                    Saya senang mempelajari hal-hal baru terutama terkait desain grafis, pengembangan web dasar, dan inovasi digital. Di waktu luang, saya aktif dalam kegiatan sosial sekolah dan berpartisipasi dalam berbagai lomba akademik maupun non-akademik.
                 </p>
+                <br>
+                <p class="about-content">
+                    Cita-cita saya adalah melanjutkan pendidikan di bidang teknologi informasi dan menjadi ahli di bidang pengembangan aplikasi yang bermanfaat bagi masyarakat.
+                </p>
+
             </div>
 
                
-            <div class="card">
+           <div class="card">
                 <h2 class="card-title">Pendidikan</h2>
                 
                 <div class="timeline">
+                    <!-- Nah disini kamu bisa ubah sesuai dengan sekolah kamu  -->
                     <div class="timeline-item">
                         <div class="timeline-date">
-                            <i class="fas fa-calendar-alt"></i> 2013 - 2017
+                            <i class="fas fa-calendar-alt">2022 - 2025 </i>       <!-- Ini merupakan tempat dimana kamu bisa memasukan tahun kamu masuk hingga lulus -->
                         </div>
-                        <h3 class="timeline-title">Sarjana Teknik Informatika</h3>
-                        <h4 class="timeline-subtitle">Universitas Teknologi Indonesia</h4>
+                        <h3 class="timeline-title">Sekolah Menengah Atas</h3>   <!-- Ini letak jenjang pendidikan mu-->
+                        <h4 class="timeline-subtitle">SMA Multimedia Nusantara</h4> <!-- Disini masukan nama sekolah mu-->
                         <p class="timeline-description">
-                            IPK: 3.8/4.0. Fokus pada pengembangan web dan antarmuka pengguna. Aktif dalam organisasi mahasiswa dan kompetisi pengembangan web.
+                            Jurusan: Ilmu Pengetahuan Alam (IPA). Aktif di OSIS Divisi Teknologi dan Klub Robotik. Nilai rata-rata raport: 89.2. <!-- Kamu bisa ceritakan apa yang telah kamu lakukan disekolah, atau buat aja semenarik mungkin -->
                         </p>
                     </div>
                     
                     <div class="timeline-item">
                         <div class="timeline-date">
-                            <i class="fas fa-calendar-alt"></i> 2019
+                            <i class="fas fa-calendar-alt">2019 - 2022</i> 
                         </div>
-                        <h3 class="timeline-title">Sertifikasi React.js</h3>
-                        <h4 class="timeline-subtitle">Meta Frontend Developer Professional Certificate</h4>
+                        <h3 class="timeline-title">Sekolah Menengah Pertama</h3>
+                        <h4 class="timeline-subtitle">SMP Multimedia Nusantara</h4>
                         <p class="timeline-description">
-                            Mempelajari konsep advanced React.js termasuk hooks, context API, dan state management.
+                            Juara 1 Lomba Cerdas Cermat Tingkat Kecamatan. Nilai UN: 86.5.
                         </p>
                     </div>
+                    
+                    <div class="timeline-item"> <!-- Start Copy -->
+                        <div class="timeline-date">
+                            <i class="fas fa-calendar-alt"> 2013 - 2019</i>
+                        </div>
+                        <h3 class="timeline-title">Sekolah Dasar</h3>
+                        <h4 class="timeline-subtitle">SD Multimedia Nusantara</h4>
+                        <p class="timeline-description">
+                           Duta sekolah dalam Olimpiade Matematika SD Tingkat Kota.
+                        </p>
+                    </div> <!-- End Copy -->
+
+                    <!-- Kalau mau menambah jenjang sekolah lagi mungkin bisa ditambahkan dengan copas timelime-itemnya, Contohnya bisa tambahkan kuliah di UMN -->
+
+
                 </div>
             </div>
             
             <div class="card">
-                <h2 class="card-title">Pengalaman Kerja</h2>
+
+                <h2 class="card-title">Pengalaman Organisasi</h2> <!-- Bisa diubah menjadi lombamu semasa sekolah -->
+
+                <!-- Disini kamu bisa menambahkan apa saja pengalaman organisasi mu semasa sekolah atau bisa juga diganti menjadi lomba apa saja yang telah kamu ikuti  -->
                 
                 <div class="timeline">
-                    <div class="timeline-item">
+
+                    <div class="timeline-item"> <!-- Start Copy -->
                         <div class="timeline-date">
-                            <i class="fas fa-calendar-alt"></i> Jan 2021 - Sekarang
+                            <i class="fas fa-calendar-alt">2022 - Sekarang</i>  <!-- Ini merupakan letak dimana kamu bisa memodifikasi waktu atau timeline kegiatan mu -->
                         </div>
-                        <h3 class="timeline-title">Senior Frontend Developer</h3>
-                        <h4 class="timeline-subtitle">TechInnovate Solutions</h4>
+                        <h3 class="timeline-title">Anggota Divisi Teknologi OSIS</h3>  <!-- Masukan nama kegiatan mu disini -->
+                        <h4 class="timeline-subtitle">SMA Multimedia Nusantara</h4>  <!-- Masukan nama naungannya disini kan Sekolah bisa juga diganti dengan nama organisasi lain -->
                         <p class="timeline-description">
-                            Memimpin pengembangan UI untuk aplikasi SaaS perusahaan. Menerapkan React.js dengan TypeScript dan mengoptimalkan kinerja aplikasi hingga 40%. Juga bertanggung jawab atas mentoring tim junior.
-                        </p>
-                    </div>
+                            Membuatan website OSIS dan media sosial sekolah. Mengelola konten digital untuk event sekolah seperti Class Meeting.
+                        </p> <!-- Masukan nama naungannya disini kan Sekolah bisa juga diganti dengan nama organisasi lain -->
+                    </div> <!-- End Copy -->
                     
-                    <div class="timeline-item">
-                        <div class="timeline-date">
-                            <i class="fas fa-calendar-alt"></i> Mar 2019 - Des 2020
-                        </div>
-                        <h3 class="timeline-title">Frontend Developer</h3>
-                        <h4 class="timeline-subtitle">Digital Nexus</h4>
-                        <p class="timeline-description">
-                            Mengembangkan aplikasi e-commerce dengan Vue.js dan Vuetify. Membuat komponen UI yang reusable dan meningkatkan pengalaman pengguna melalui A/B testing.
-                        </p>
-                    </div>
+                    <!-- Bila ingin menambahkan kegiatan lain tinggal diperbanyak ya, semangat !! -->
                     
-                    <div class="timeline-item">
-                        <div class="timeline-date">
-                            <i class="fas fa-calendar-alt"></i> Jun 2017 - Feb 2019
-                        </div>
-                        <h3 class="timeline-title">Web Developer Junior</h3>
-                        <h4 class="timeline-subtitle">Creative Web Studio</h4>
-                        <p class="timeline-description">
-                            Membangun website untuk berbagai klien menggunakan HTML, CSS, dan JavaScript. Berkolaborasi dengan desainer untuk menerapkan mockup menjadi kode yang responsif dan aksesibel.
-                        </p>
-                    </div>
+
                 </div>
+
             </div>
          
     <script src="scripts.js"></script>

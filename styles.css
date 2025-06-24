@@ -1,25 +1,30 @@
 /* ================= VARIABEL UTAMA ================= */
 :root {
-    /* WARNA */
-    --primary: #00eeff;
-    --secondary: #ff00d6;
-    --accent: #8c52ff;
-    --background: #0d0d17;
-    --card-bg: rgba(25, 25, 50, 0.7);
-    --text-color: #e0e0ff;
-    --text-light: #a0a0ff;
-    --border-color: rgba(0, 238, 255, 0.3);
+    /* Disini kita akan mendeklarasi Variable yang kita gunakan, fungsinya agar kita tak binggung sendiri bila code sudah panjang  */
+
+
+    /* WARNA (Bisa diubah ubah warnanya sesuaikan dengan selera kalian */
+    --primary: #00eeff; /*Warna Pada nama, border foto profil, Progress bar skill, Garis Timeline, Efek Hover pada Kartu*/
+    --secondary: #ff00d6; /*Warna aksen kontras pada gradient nama dan juga timeline */
+    --accent: #8c52ff; /* Diggunakan sebagai warna pendukung pada bullet point pada timeline, background radial gradient, dan juga Progress bar*/
+    --background: #0d0d17; /* Diggunakan untuk warna background */
+    --card-bg: rgba(25, 25, 50, 0.7); /* Background pada semua element card atau section baik kiri dan kanan*/
+    --text-color: #e0e0ff; /* Warna untuk teks pada informasi yang ada */
+    --text-light: #a0a0ff; /* Warna untuk teks pada bagian data diri */
+    --border-color: rgba(0, 238, 255, 0.3); /* Warna border dari tiap section */
+    
+    /* Bisa juga gunakan ctrl + f untuk mencari tiap tiap variable ini  */
     
     /* UKURAN */
-    --card-radius: 15px;
-    --skill-height: 8px;
-    --avatar-size: 140px;
-    --spacing-md: 25px;
+    --card-radius: 15px; /* Untuk mengubah corner radius makin tinggi section akan lebih berbentuk bulat*/
+    --skill-height: 8px; /* Ukuran pada section skill bar */
+    --avatar-size: 140px; /* Variable untuk besar dan kecilkan gambar profile (coba ubah) */
+    --spacing-md: 25px; /* Untuk memberikan spacing antar card */
     
     /* EFEK */
     --card-shadow: 0 0 25px rgba(0, 238, 255, 0.1);
-    --card-glow: 0 0 25px var(--primary);
-    --transition-speed: 0.3s;
+    --card-glow: 0 0 25px var(--primary); /* Untuk menciptakan efek glow saat hovering  */
+    --transition-speed: 0.3s; /* Mengatur speed hover coba tambah atau kurang untuk melihat efek nyatanya */
     
     /* FONT */
     --base-font-size: 16px;
@@ -27,6 +32,7 @@
 
 /* ================= STYLE UTAMA ================= */
 * {
+    /* Ini merupakan Style pada semua Section HTML jadi ini adalah basicnya */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,17 +41,19 @@
 }
 
 body {
+    /* Ini adalah letak css pada section body, jadi semua element yang visible akan menerapkan style ini */
     background: var(--background);
     color: var(--text-color);
     line-height: 1.6;
     padding: var(--spacing-md);
     min-height: 100vh;
     background-image: 
-        radial-gradient(circle at 10% 20%, rgba(140, 82, 255, 0.1) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(0, 238, 255, 0.1) 0%, transparent 20%);
+        radial-gradient(circle at 10% 20%, rgba(140, 82, 255, 0.1) 0% , transparent 20%), /* Coba ubah circle at-nya dan bandingin perbedaan sebelum diubah dan setelah*/
+        radial-gradient(circle at 90% 80%, rgba(0, 238, 255, 0.1) 0%, transparent 20%);  /* Ini akan menciptkan light berwarna biru di pojok kanan dan atas*/
 }
 
 .cv-container {
+    /* Ini anggap saja seperti wadah yang menaungi tiap section card */
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
@@ -57,12 +65,14 @@ body {
 
 @media (min-width: 768px) {
     .cv-container {
-        grid-template-columns: 35% 65%;
+        grid-template-columns: 35% 65%; /* Pembagian ukuran antara kedua section */
     }
+    /* Bertujuan untuk membuat website yang responsive sehingga bila width melebihi 768 px maka website akan membagi section menjadi kiri dan kanan, sedangkan bila kurang dari akan align kebawah */
 }
 
 /* ================= SIDEBAR KIRI ================= */
 .sidebar {
+    /* Ini merupakan styling pada section bagian kiri (Section Profile (Nama dll, hingga section skill) */
     background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: var(--card-radius);
@@ -73,6 +83,7 @@ body {
 }
 
 .profile-header {
+    /* Merupakan holder dari section profile */
     text-align: center;
     padding: 30px 20px;
     background: linear-gradient(135deg, rgba(0, 238, 255, 0.1), rgba(140, 82, 255, 0.1));
@@ -80,6 +91,7 @@ body {
 }
 
 .profile-img {
+    /* Styling pada Profile Image */
     width: var(--avatar-size);
     height: var(--avatar-size);
     border-radius: 50%;
@@ -91,6 +103,7 @@ body {
 }
 
 .name {
+    /* Mmeberikan gradient warna pada teks Nama dibawah Profile */
     font-size: 2.2rem;
     font-weight: 700;
     background: linear-gradient(45deg, var(--primary), var(--secondary));
@@ -99,17 +112,20 @@ body {
     margin-bottom: 5px;
 }
 
-.title {
+.work-title {
+    /* ini merupakan tempat nama pekerjaan mu */
     font-size: 1.1rem;
     color: var(--primary);
     letter-spacing: 1px;
 }
 
 .contact-info {
+    /* Ini memberikan jarak antar contact info jadi jaraknya diatur pakai padding ini */
     padding: 25px;
 }
 
 .info-item {
+    /* Ini merupakan section pada contact info */
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
@@ -117,14 +133,10 @@ body {
     border-bottom: 1px dashed var(--border-color);
 }
 
-.info-icon {
-    color: var(--primary);
-    font-size: 1.2rem;
-    min-width: 30px;
-    padding-top: 3px;
-}
+
 
 .info-label {
+    /* Ini merupakan tempat lable contoh Email, Github, dll */
     font-size: 0.85rem;
     color: var(--text-light);
     text-transform: uppercase;
@@ -133,24 +145,27 @@ body {
 }
 
 .info-value {
+    /* Ini merupakan style dari contactmu, untuk lebih kelihatan boleh diubah warnannya */
     font-size: 1rem;
-    text-decoration: none;
+    text-decoration: none; /* Ini karena pada element <a> style dari text akan berubah menjadi biru dengan underline sehingga harus distle none agar tak ada style */
     color: var(--text-color);
 }
 
 
 .skills-section {
+    /* ini adalah wadah dari section skill */
     padding: 0 25px 25px;
 }
 
-.section-title {
+.skill-title {
     font-size: 1.4rem;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
 
-.section-title::before {
+.skill-title::before {
+    /* Menambahkan titik bulat kecil sebelum judul pada Kemampuan Umum */
     content: '';
     display: inline-block;
     width: 10px;
@@ -162,16 +177,19 @@ body {
 }
 
 .skill-item {
+    /* Ini merupakan container dari tiap tipe skill */
     margin-bottom: 20px;
 }
 
 .skill-name {
+    /* Ini merupakan text label dari skill */
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
 }
 
 .skill-bar {
+    /* SkillBar yang berfungsi untuk menampilkan garis berdasarkan data yang telah input */
     height: var(--skill-height);
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -179,6 +197,7 @@ body {
 }
 
 .skill-level {
+    /* Menunjukan persentase dari skill yang dimiliki */
     height: 100%;
     background: linear-gradient(90deg, var(--primary), var(--accent));
     border-radius: 10px;
@@ -187,38 +206,43 @@ body {
 }
 
 .skill-level::after {
+    /* Untuk memberikan gradient tipis pada skill bar */
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 }
 
 /* ================= KONTEN UTAMA KANAN ================= */
 .main-content {
+    /* Ini merupakan container di sisi kanan */
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
 }
 
 .card {
+    /* Card merupakan style dari tiap section yang terpisah pada sisi kanan (Section tetang diri, pengalaman organisasi, dan juga Pendidikan */
     background: var(--card-bg);
     backdrop-filter: blur(10px);
     border-radius: var(--card-radius);
     padding: 30px;
     border: 1px solid var(--border-color);
     box-shadow: var(--card-shadow);
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease; /* ini merupakan transition atau animasi yang terjadi bila terjadi pemicu contohnya dapat dilihat pada hover yang mengubah posisi Y*/
 }
 
 .card:hover {
+    /* Akan ke trigger bila mouse masuk kedalam Section card */
     transform: translateY(-5px);
-    box-shadow: var(--card-glow);
+    box-shadow: var(--card-glow); 
 }
 
 .card-title {
+    /* Style dari tiap tiap nama section */
     font-size: 1.8rem;
     margin-bottom: 25px;
     display: flex;
@@ -227,6 +251,7 @@ body {
 }
 
 .card-title::after {
+    /* Garis tipis pada bagian atas tiap section sebelah kanan */
     content: '';
     flex: 1;
     height: 2px;
@@ -235,6 +260,7 @@ body {
 }
 
 .timeline-item {
+    /* timeline item adalah style dari tiap riwayat pendidikan dan juga organisasi */
     position: relative;
     padding: 0 0 30px 30px;
     border-left: 2px solid var(--primary);
@@ -242,11 +268,13 @@ body {
 }
 
 .timeline-item:last-child {
+    /* Ini sama juga merupakan riwayat pendidikan dan organisasi perbedaanya ia akan mengambil element terakhir (pada riwayat pendidikan di template merupakan SD) Fungsinya agar margin dari timeline dibawah tak terlalu lebar dengan compoment dibwahnya */
     margin-bottom: 0;
     padding-bottom: 0;
 }
 
 .timeline-item::before {
+    /* Menambahkan titik bulat pada timeline */
     content: '';
     position: absolute;
     width: 16px;
@@ -260,63 +288,70 @@ body {
 }
 
 .timeline-date {
+    /* Ini merupakan style dari tanggal pada tiap timeline */
     font-size: 0.9rem;
     color: var(--primary);
     margin-bottom: 5px;
     display: flex;
     align-items: center;
-}
-
-.timeline-date i {
     margin-right: 8px;
 }
 
+
 .timeline-title {
+    /* Ini style dari nama kegiatan atau jenjang sekolah */
     font-size: 1.3rem;
     margin-bottom: 10px;
     color: var(--text-color);
 }
 
 .timeline-subtitle {
+    /* Ini style dari organisasi atau nama sekolahnya */
     font-size: 1.1rem;
     color: var(--secondary);
     margin-bottom: 10px;
 }
 
 .timeline-description {
+    /* Ini style dari penjelasanmu tentang kegiatan yang ada */
     font-size: 1rem;
     color: rgba(224, 224, 255, 0.8);
     line-height: 1.6;
 }
 
 .about-content {
+    /* Ini merupakan style dari tentang saya  */
     font-size: 1.1rem;
     line-height: 1.8;
 }
 
 /* ================= EFEK FUTURISTIK ================= */
+
+/* Glow effect dapat dilihat pada dot berwarna merah yang dapat dilihat pada pojok kiri atas dan kanan bawah */
 .glow-effect {
-    position: fixed;
+    position: fixed; /* fixed diggunakan sehingga walaupun kamu scroll posisi dari glow effect ini akan tetap pada tempat yang sama */
     width: 300px;
     height: 300px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(255, 0, 0, 0.2) 0%, transparent 70%);
-    z-index: -1;
+    z-index: -1; /* z-index bertujuan untuk menurunkan atau menaikan layer dari html (coba ubah menjadi 100 dan bandingkan) */
     transition: all 0.5s ease;
 }
 
 .glow-1 {
+    /* Glow 1 dapat dilihat pada sisi kiri atas, top dan leftnya bisa diganti untuk melihat perbedaan efek dari glownya */
     top: 10%;
     left: 10%;
 }
 
 .glow-2 {
+    /* Ini terletak pada kanan bawah */
     bottom: 10%;
     right: 10%;
-    background: radial-gradient(circle, rgba(255, 0, 214, 0.2) 0%, transparent 70%);
 }
 
 .hex-pattern {
+    /* Ini merupakan style hexagon dapat dilihat di sisi kiri bawah */
     position: absolute;
     width: 100%;
     height: 100%;
@@ -324,7 +359,8 @@ body {
     left: 0;
     background-image: 
         radial-gradient(circle at center, transparent 0%, var(--background) 100%),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><polygon points="50,0 95,25 95,75 50,100 5,75 5,25" fill="none" stroke="rgba(0, 238, 255, 0.03)" stroke-width="1"/></svg>');
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><polygon points="50,0 95,25 95,75 50,100 5,75 5,25" fill="none" stroke="rgba(0, 238, 255, 0.03)" stroke-width="1"/></svg>'); 
+        /* SVG hexagon yang bisa kamu lihat bila dicermati dengan seksama*/
     background-size: cover;
     z-index: -1;
     opacity: 0.5;
@@ -343,4 +379,6 @@ body {
     .card {
         padding: 20px;
     }
+
+    /* Coba kecilkan width dari windows */
 }
